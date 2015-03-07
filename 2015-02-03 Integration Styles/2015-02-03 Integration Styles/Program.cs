@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Diagnostics;
 using System.Linq;
 using System.Messaging;
 using System.Text;
@@ -74,13 +75,23 @@ namespace _2015_02_03_Integration_Styles
 			{
 				MessageQueue.Create(@".\Private$\TestOut2");
 				outQueue2 = new MessageQueue(@".\Private$\TestOut2");
-				outQueue2.Label = "TestOut1";
+				outQueue2.Label = "TestOut2";
 			}
+
 			Router router = new Router(messageQueue, outQueue1, outQueue2);
-			messageQueue.Send(dowJones, dowJones.Company);
-			messageQueue.Send(nasdaq100, nasdaq100.Company);
-			messageQueue.Send(nasdaqComposite, nasdaqComposite.Company);
-			messageQueue.Send(sp500, sp500.Company);
+			try
+			{
+				messageQueue.Send(dowJones, dowJones.Company);
+				messageQueue.Send(nasdaq100, nasdaq100.Company);
+				messageQueue.Send(nasdaqComposite, nasdaqComposite.Company);
+				messageQueue.Send(sp500, sp500.Company);
+			}
+			catch (Exception ex)
+			{
+				Debug.WriteLine("Error[1]: " + ex.Message);
+			}
+
+			// Console.ReadLine();
 		}
 	}
 }

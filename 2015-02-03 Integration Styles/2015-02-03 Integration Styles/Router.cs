@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 using System.Messaging;
+using System.Diagnostics;
 
 namespace _2015_02_03_Integration_Styles
 {
@@ -13,8 +14,6 @@ namespace _2015_02_03_Integration_Styles
 		protected MessageQueue inQueue;
 		protected MessageQueue outQueue1;
 		protected MessageQueue outQueue2;
-
-		protected bool toggle = false;
 
 		public Router(MessageQueue inQueue, MessageQueue outQueue1, MessageQueue outQueue2)
 		{
@@ -29,17 +28,23 @@ namespace _2015_02_03_Integration_Styles
 		{
 			MessageQueue mq = (MessageQueue)source;
 			Message message = mq.EndReceive(asyncResult.AsyncResult);
-			if (IsConditionFulfilled())
-				outQueue1.Send(message);
-			else
-				outQueue2.Send(message);
-			mq.BeginReceive();
-		}
+			
+			message.Formatter = new XmlMessageFormatter(new Type[] { typeof(Stock) });
+			Stock stock = (Stock) message.Body;
 
-		protected bool IsConditionFulfilled()
-		{
-			toggle = !toggle;
-			return toggle;
+			try
+			{
+				string company = stock.Company;
+				if (company.Contains("NASDAQ"))
+					outQueue1.Send(stock, stock.Company);
+				else
+					outQueue2.Send(stock, stock.Company);
+				mq.BeginReceive();
+			}
+			catch (Exception ex)
+			{
+				Debug.WriteLine("Error[2]: " + ex.Message);
+			}
 		}
 	}
 }
