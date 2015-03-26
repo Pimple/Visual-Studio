@@ -16,7 +16,7 @@ namespace ConsoleApplication2
             
 			Product banana = new Product("Banana", 1.99);
 			Product chocolate = new Product("Chocolate", 42);
-			Product goldenToiletSeat = new Product("Golden Toilet Seat", 9000.01);
+			Product goldenToiletSeat = new Product("Golden Toilet Seat", 90.01);
 
 			ShoppingCart cart = new ShoppingCart();
 			Customer customer = cart.SetCustomer("Henrik", "ferociouscookiemonster@gmail.com");
@@ -27,7 +27,7 @@ namespace ConsoleApplication2
 
 			Dictionary<string, double> receipt = cart.Receipt();
 			foreach (KeyValuePair<string, double> entry in receipt)
-				Console.WriteLine(entry.Key + "\t\t" + entry.Value);
+				Console.WriteLine(entry.Value + "\t" + entry.Key);
 			
 			Console.ReadLine();
         }

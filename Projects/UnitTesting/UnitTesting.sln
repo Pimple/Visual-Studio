@@ -1,0 +1,35 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Demos", "AbsoluteValue\Demos.csproj", "{D2A3C660-5E01-4D08-B4E9-9ED68CD04FF3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestObjects", "TestObjects\TestObjects.csproj", "{357717E7-B120-4DB5-B6FE-A2A5735A64CB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sorting", "Sorting\Sorting.csproj", "{BF8223C4-8ACE-4771-8103-66B8AE562549}"
+EndProject
+Global
+	GlobalSection(TestCaseManagementSettings) = postSolution
+		CategoryFile = UnitTesting.vsmdi
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D2A3C660-5E01-4D08-B4E9-9ED68CD04FF3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D2A3C660-5E01-4D08-B4E9-9ED68CD04FF3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D2A3C660-5E01-4D08-B4E9-9ED68CD04FF3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D2A3C660-5E01-4D08-B4E9-9ED68CD04FF3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{357717E7-B120-4DB5-B6FE-A2A5735A64CB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{357717E7-B120-4DB5-B6FE-A2A5735A64CB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{357717E7-B120-4DB5-B6FE-A2A5735A64CB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{357717E7-B120-4DB5-B6FE-A2A5735A64CB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BF8223C4-8ACE-4771-8103-66B8AE562549}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BF8223C4-8ACE-4771-8103-66B8AE562549}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BF8223C4-8ACE-4771-8103-66B8AE562549}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BF8223C4-8ACE-4771-8103-66B8AE562549}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

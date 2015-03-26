@@ -31,6 +31,7 @@ namespace ConsoleApplication2
 			Contract.Invariant(TotalPrice() <= priceLimit);
 		}
 
+		[Pure]
 		private double TotalPrice()
 		{
 			double totalPrice = 0;

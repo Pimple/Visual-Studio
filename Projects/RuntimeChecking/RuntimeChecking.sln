@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Account", "Account\Account.csproj", "{17DC5B4E-394B-4B13-8D43-C1BCF072CE28}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ArgumentValidation", "ArgumentValidation\ArgumentValidation.csproj", "{9B8796B6-2C47-4485-883F-628B41CA1488}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Invariants", "Invariants\Invariants.csproj", "{ABC4B59C-488E-4149-8666-629A213018D8}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x86 = Debug|x86
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{17DC5B4E-394B-4B13-8D43-C1BCF072CE28}.Debug|x86.ActiveCfg = Debug|x86
+		{17DC5B4E-394B-4B13-8D43-C1BCF072CE28}.Debug|x86.Build.0 = Debug|x86
+		{17DC5B4E-394B-4B13-8D43-C1BCF072CE28}.Release|x86.ActiveCfg = Release|x86
+		{17DC5B4E-394B-4B13-8D43-C1BCF072CE28}.Release|x86.Build.0 = Release|x86
+		{9B8796B6-2C47-4485-883F-628B41CA1488}.Debug|x86.ActiveCfg = Debug|x86
+		{9B8796B6-2C47-4485-883F-628B41CA1488}.Debug|x86.Build.0 = Debug|x86
+		{9B8796B6-2C47-4485-883F-628B41CA1488}.Release|x86.ActiveCfg = Release|x86
+		{9B8796B6-2C47-4485-883F-628B41CA1488}.Release|x86.Build.0 = Release|x86
+		{ABC4B59C-488E-4149-8666-629A213018D8}.Debug|x86.ActiveCfg = Debug|x86
+		{ABC4B59C-488E-4149-8666-629A213018D8}.Debug|x86.Build.0 = Debug|x86
+		{ABC4B59C-488E-4149-8666-629A213018D8}.Release|x86.ActiveCfg = Release|x86
+		{ABC4B59C-488E-4149-8666-629A213018D8}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
